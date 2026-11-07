@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#102b4e">
+  <title>Your Cart & Checkout | TAPSHIPP</title><link rel="stylesheet" href="style.css"><script src="https://checkout.razorpay.com/v1/checkout.js"></script><script defer src="app.js"></script>
+</head>
+<body data-page="checkout">
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">T</span><span>TAPSHIPP<small>SHOP SMART. LIVE BETTER.</small></span></a><a class="back-link" href="index.html">← Continue shopping</a></header>
+  <main class="page-shell checkout-shell">
+    <div class="page-title"><span class="eyebrow">ALMOST YOURS</span><h1>Your cart & checkout</h1><p class="muted">Review your items and enter your delivery details.</p></div>
+    <div id="checkoutEmpty" class="empty-state hidden"><strong>Your cart is empty</strong><p>Find something you love in our store.</p><a class="btn btn-primary" href="index.html">Browse products</a></div>
+    <div id="checkoutLayout" class="checkout-layout">
+      <section class="checkout-main">
+        <div class="panel"><div class="panel-heading"><h2>1. Your items</h2><button id="clearCart" class="text-button">Clear cart</button></div><div id="cartItems"></div></div>
+        <form id="checkoutForm" class="panel checkout-form">
+          <div class="panel-heading"><h2>2. Delivery information</h2></div>
+          <div class="form-grid">
+            <label>Full name <input name="customerName" autocomplete="name" required maxlength="100" placeholder="Your full name"></label>
+            <label>Mobile number <input name="phone" type="tel" inputmode="numeric" autocomplete="tel" required pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10-digit mobile number"></label>
+            <label class="full-field">Email address (optional) <input name="email" type="email" autocomplete="email" maxlength="150" placeholder="you@example.com"></label>
+            <label class="full-field">House / building / street <textarea name="address" autocomplete="street-address" required maxlength="500" rows="3" placeholder="Enter your complete delivery address"></textarea></label>
+            <label>City / Town <input name="city" required maxlength="80" placeholder="City or town"></label>
+            <label>District <input name="district" required maxlength="80" placeholder="District"></label>
+            <label>State <input name="state" required maxlength="80" value="Kerala"></label>
+            <label>PIN code <input name="pincode" inputmode="numeric" required pattern="[1-9][0-9]{5}" maxlength="6" placeholder="6-digit PIN code"></label>
+            <label class="full-field">Order note (optional) <textarea name="note" rows="2" maxlength="300" placeholder="Any delivery instructions?"></textarea></label>
+          </div>
+          <div class="payment-note"><strong>Secure online payment with Razorpay</strong><p>Pay using the payment methods enabled on your Razorpay account, such as UPI, cards or netbanking. Your order is confirmed only after TAPSHIPP verifies the payment.</p></div>
+          <label class="consent"><input type="checkbox" required> I confirm that my contact and delivery details are correct.</label>
+          <button class="btn btn-primary btn-wide" type="submit" id="placeOrderBtn">Pay securely with Razorpay <span>→</span></button>
+          <p class="fine-print">By placing this order, you agree to the store's delivery, return and privacy policies.</p>
+          <div id="checkoutMessage" class="form-message" role="status"></div>
+        </form>
+      </section>
+      <aside class="panel order-summary"><h2>Order summary</h2><div class="summary-line"><span>Items subtotal</span><strong id="subtotalValue">₹0.00</strong></div><div class="summary-line"><span>Delivery</span><strong id="deliveryValue">Calculated by store</strong></div><div class="summary-line total-line"><span>Estimated total</span><strong id="totalValue">₹0.00 + delivery</strong></div><p class="fine-print">Delivery charge is currently configured as ₹0 in the backend. Set your actual shipping calculation before launch. The final amount shown in Razorpay is the amount charged.</p></aside>
+    </div>
+  </main>
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">T</span><span>TAPSHIPP<small>SHOP SMART. LIVE BETTER.</small></span></a><p>© <span id="year"></span> TAPSHIPP. All rights reserved.</p></footer>
+</body>
+</html>

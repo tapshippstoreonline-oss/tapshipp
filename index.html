@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102b4e">
+  <title>TAPSHIPP | Shop Online</title>
+  <meta name="description" content="Discover products and shop online with TAPSHIPP.">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body data-page="home">
+  <div class="announcement">Welcome to TAPSHIPP — Your online shopping destination</div>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">T</span><span>TAPSHIPP<small>SHOP SMART. LIVE BETTER.</small></span></a>
+    <form class="header-search" id="searchForm"><input id="searchInput" type="search" placeholder="Search products..." aria-label="Search products"><button aria-label="Search">⌕</button></form>
+    <nav class="header-actions"><a href="#categories">Categories</a><a class="cart-link" href="checkout.html">Cart <span id="cartCount" class="count">0</span></a></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><span class="eyebrow">THE TAPSHIPP STORE</span><h1>Find what you need.<br><em>Love what you get.</em></h1><p>Explore useful products, discover great finds and enjoy a simple shopping experience.</p><a class="btn btn-light" href="#products">Explore products <span>→</span></a></div>
+      <div class="hero-art"><div class="hero-circle"></div><div class="hero-card"><span>NEW</span><strong>GOOD<br>FINDS.</strong><small>JUST A CLICK AWAY</small></div></div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-heading"><div><span class="eyebrow">BROWSE YOUR WAY</span><h2>Shop by category</h2></div></div>
+      <div id="categoryList" class="category-list"><button class="category-chip active" data-category="all">All products</button></div>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading product-heading"><div><span class="eyebrow">HANDPICKED FOR YOU</span><h2>Explore our products</h2><p class="muted" id="resultSummary">Discover the latest products in our store.</p></div>
+        <select id="sortSelect" class="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option></select>
+      </div>
+      <div id="productGrid" class="product-grid"><div class="loading">Loading products...</div></div>
+      <div id="emptyState" class="empty-state hidden"><strong>No products found</strong><p>Try another search or category.</p><button class="btn btn-outline" id="clearFilters">Clear filters</button></div>
+    </section>
+    <section class="trust-strip"><div><b>✓</b><span><strong>Easy ordering</strong><small>A simple checkout process</small></span></div><div><b>◇</b><span><strong>Product details</strong><small>Clear information before you buy</small></span></div><div><b>↗</b><span><strong>Order support</strong><small>Help when you need it</small></span></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="index.html"><span class="brand-mark">T</span><span>TAPSHIPP<small>SHOP SMART. LIVE BETTER.</small></span></a><p>© <span id="year"></span> TAPSHIPP. All rights reserved.</p><div><a href="mailto:support@tapshipp.com">Contact</a><a href="README.md">Store information</a></div></footer>
+</body>
+</html>
