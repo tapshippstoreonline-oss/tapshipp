@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#102b4e"><title>Order received | TAPSHIPP</title><link rel="stylesheet" href="style.css"></head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">T</span><span>TAPSHIPP<small>SHOP SMART. LIVE BETTER.</small></span></a></header>
+  <main class="success-wrap"><div class="success-card"><div class="success-icon">✓</div><span class="eyebrow">THANK YOU FOR SHOPPING</span><h1>Your order has been received!</h1><p>We have recorded your order request. The TAPSHIPP team should contact you to confirm availability, delivery charges and fulfilment.</p><div class="order-reference">Order reference<strong id="orderReference">Loading...</strong></div><p class="muted small">Please keep this reference number for future communication.</p><a class="btn btn-primary" href="index.html">Continue shopping</a></div></main>
+  <script>
+    const id = new URLSearchParams(location.search).get('id') || sessionStorage.getItem('tapshipp_last_order') || 'Not available';
+    document.getElementById('orderReference').textContent = id;
+  </script>
+</body>
+</html>
