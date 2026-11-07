@@ -1,8 +1,8 @@
 /* TAPSHIPP storefront frontend.
    Set API_URL to the deployed Google Apps Script web app URL.
    Leave it blank to run the storefront in demo mode using local sample products. */
-const API_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_EXEC_URL_HERE"; // Apps Script /exec URL
-const RAZORPAY_KEY_ID = "PASTE_YOUR_LIVE_RAZORPAY_KEY_ID_HERE"; // Key ID is public; NEVER put Key Secret here
+const API_URL = "https://script.google.com/macros/s/AKfycbw1oaSik-8vD_kEl2yNKWTU5HUbQT-3zQ-RImWyMGszb1IpcaTAVLHKpWANUIYNGNkz/exec"; // Apps Script /exec URL
+const RAZORPAY_KEY_ID = "rzp_live_TgLVSTx6twXbmO"; // Key ID is public; NEVER put Key Secret here
 const CURRENCY = "INR";
 const STORE_DELIVERY_NOTE = "Delivery charges confirmed by store";
 const SAMPLE_PRODUCTS = [
