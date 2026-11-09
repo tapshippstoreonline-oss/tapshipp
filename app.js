@@ -4,7 +4,7 @@
 const API_URL = "https://script.google.com/macros/s/AKfycbw1oaSik-8vD_kEl2yNKWTU5HUbQT-3zQ-RImWyMGszb1IpcaTAVLHKpWANUIYNGNkz/exec"; // Apps Script /exec URL
 const RAZORPAY_KEY_ID = "rzp_live_TgLVSTx6twXbmO"; // Key ID is public; NEVER put Key Secret here
 const CURRENCY = "INR";
-const STORE_DELIVERY_NOTE = "Delivery charges confirmed by store";
+const STORE_DELIVERY_NOTE = "Free Delivery";
 const SAMPLE_PRODUCTS = [
   {id:"TS1001",name:"Everyday Travel Backpack",brand:"TAPSHIPP Select",category:"Bags",price:899,mrp:1299,description:"A practical everyday backpack for commuting, travel and daily essentials.",features:["Spacious main compartment","Comfortable adjustable shoulder straps","Useful front organiser pocket"],specifications:"Material: Polyester | Capacity: 25 L | Colour: As shown",stock:18,images:["https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900","https://images.unsplash.com/photo-1622560480654-d96214fdc887?w=900"],delivery:"Delivery estimate and charge will be confirmed after order.",returns:"Return eligibility is subject to the final store policy.",warranty:"As specified by the supplier."},
   {id:"TS1002",name:"Classic Wireless Headphones",brand:"TAPSHIPP Select",category:"Electronics",price:1199,mrp:1699,description:"Comfort-focused wireless headphones for music, calls and everyday use.",features:["Wireless connectivity","Soft over-ear cushions","Foldable design"],specifications:"Connectivity: Bluetooth | Type: Over-ear | Colour: As shown",stock:12,images:["https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=900"],delivery:"Delivery estimate and charge will be confirmed after order.",returns:"Return eligibility is subject to the final store policy.",warranty:"As specified by the supplier."},
