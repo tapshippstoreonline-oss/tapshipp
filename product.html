@@ -16,8 +16,10 @@
   <script defer src="app.js"></script>
 
   <style>
-    /* TAPSHIPP HEADER LOGO */
-    .site-header .brand {
+    /* TAPSHIPP LOGO - HEADER AND FOOTER */
+
+    .site-header .brand,
+    .site-footer .footer-brand {
       display: flex;
       align-items: center;
       text-decoration: none;
@@ -31,11 +33,25 @@
       display: block;
     }
 
-    /* MOBILE RESPONSIVE LOGO */
+    .footer-logo {
+      height: 48px;
+      width: auto;
+      max-width: 190px;
+      object-fit: contain;
+      display: block;
+    }
+
+    /* MOBILE RESPONSIVE LOGOS */
+
     @media (max-width: 600px) {
       .site-logo {
         height: 38px;
         max-width: 140px;
+      }
+
+      .footer-logo {
+        height: 40px;
+        max-width: 150px;
       }
     }
   </style>
@@ -43,7 +59,8 @@
 
 <body data-page="product">
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
+
   <header class="site-header">
 
     <a class="brand" href="index.html">
@@ -65,7 +82,9 @@
 
   </header>
 
-  <!-- MAIN PRODUCT CONTENT -->
+
+  <!-- ================= MAIN CONTENT ================= -->
+
   <main class="page-shell">
 
     <div class="breadcrumbs">
@@ -74,20 +93,27 @@
     </div>
 
     <!-- PRODUCT DETAILS -->
+
     <div id="productDetail" class="product-detail">
+
       <div class="loading">
         Loading product details...
       </div>
+
     </div>
 
+
     <!-- RELATED PRODUCTS -->
+
     <section class="section related-section">
 
       <div class="section-heading">
+
         <div>
           <span class="eyebrow">KEEP EXPLORING</span>
           <h2>You may also like</h2>
         </div>
+
       </div>
 
       <div
@@ -99,15 +125,19 @@
 
   </main>
 
-  <!-- FOOTER -->
+
+  <!-- ================= FOOTER ================= -->
+
   <footer class="site-footer">
 
     <a class="brand footer-brand" href="index.html">
-      <span class="brand-mark">T</span>
-      <span>
-        TAPSHIPP
-        <small>SHOP SMART. LIVE BETTER.</small>
-      </span>
+
+      <img
+        src="tapshipp-logo.png"
+        alt="TAPSHIPP Logo"
+        class="footer-logo"
+      >
+
     </a>
 
     <p>
@@ -116,6 +146,7 @@
     </p>
 
   </footer>
+
 
 </body>
 </html>
