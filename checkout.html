@@ -159,20 +159,30 @@
         </form>
       </section>
 
-      <aside class="panel order-summary">
+     
+<aside class="panel order-summary">
+  <h2>Order summary</h2>
 
-        <h2>Order summary</h2>
+  <div class="summary-line">
+    <span>Items subtotal</span>
+    <strong id="subtotalValue">₹0.00</strong>
+  </div>
 
-        <div class="summary-line">
-          <span>Items subtotal</span>
-          <strong id="subtotalValue">₹0.00</strong>
-        </div>
+  <div class="summary-line">
+    <span>Delivery</span>
+    <strong id="deliveryValue" class="free-delivery">FREE</strong>
+  </div>
 
-        <div class="summary-line">
-          <span>Delivery</span>
-          <strong class="free-delivery">FREE</strong>
-        </div>
+  <div class="summary-line total-line">
+    <span>Estimated total</span>
+    <strong id="totalValue">₹0.00</strong>
+  </div>
 
+  <p class="fine-print">
+    Enjoy FREE DELIVERY on your TAPSHIPP orders!
+  </p>
+</aside>
+  
         <div class="summary-line total-line">
           <span>Estimated total</span>
           <strong id="totalValue">₹0.00</strong>
@@ -187,15 +197,14 @@
     </div>
   </main>
 
-  <footer class="site-footer">
 
-    <a class="brand footer-brand" href="index.html" aria-label="TAPSHIPP home">
-      <img class="site-logo" src="website-tapshipp-logo.png" alt="TAPSHIPP — Shop Smart. Live Better.">
-    </a>
+<footer class="site-footer">
+  <a class="brand footer-brand" href="index.html" aria-label="TAPSHIPP home">
+    <img class="site-logo" src="tapshipp-logo.png" alt="TAPSHIPP — Shop Smart. Live Better.">
+  </a>
+  <p>© <span id="year"></span> TAPSHIPP. All rights reserved.</p>
+</footer>
 
-    <p>© <span id="year"></span> TAPSHIPP. All rights reserved.</p>
-
-  </footer>
 
 </body>
 </html>
