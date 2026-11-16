@@ -91,7 +91,7 @@ async function refreshProductsInBackground(){
     products=fresh;
     writeProductCache(fresh);
     if(changed){
-      renderCurrentPage();
+      CurrentPage();
       updateCartCount();
     }
   }catch(e){
@@ -181,8 +181,12 @@ function renderCheckout(){
   root.querySelectorAll("[data-inc]").forEach(b=>b.onclick=()=>changeCartQty(b.dataset.inc,1));
   root.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>{saveCart(getCart().filter(x=>x.id!==b.dataset.remove));renderCheckout();});
   const subtotal=items.reduce((s,x)=>s+x.p.price*x.qty,0);
-  $("#subtotalValue").textContent=money(subtotal);$("#deliveryValue").textContent="Confirmed by store";$("#totalValue").textContent=`${money(subtotal)} + delivery`;
-}
+const deliveryCharge=0;
+const total=subtotal+deliveryCharge;
+
+$("#subtotalValue").textContent=money(subtotal);
+$("#deliveryValue").textContent="FREE";
+$("#totalValue").textContent=money(total);
 function changeCartQty(id,delta){
   const cart=getCart(),p=products.find(x=>x.id===id),item=cart.find(x=>x.id===id);if(!item)return;
   item.qty+=delta;if(item.qty<=0){saveCart(cart.filter(x=>x.id!==id));}else{item.qty=Math.min(item.qty,p?.stock??item.qty);saveCart(cart);}
