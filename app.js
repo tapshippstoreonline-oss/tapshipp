@@ -140,7 +140,20 @@ function renderHome(){
   const categories=[...new Set(products.map(p=>p.category).filter(Boolean))];
   const categoryList=$("#categoryList");
   if(categoryList)categoryList.innerHTML=`<button class="category-chip ${activeCategory==="all"?"active":""}" data-category="all">All products</button>`+categories.map(c=>`<button class="category-chip ${activeCategory===c?"active":""}" data-category="${safe(c)}">${safe(c)}</button>`).join("");
-  categoryList?.querySelectorAll("[data-category]").forEach(b=>b.addEventListener("click",()=>{activeCategory=b.dataset.category;renderHome();}));
+  categoryList?.querySelectorAll("[data-category]").forEach(b=>b.addEventListener("click",()=>{
+  activeCategory=b.dataset.category;
+  renderHome();
+
+  setTimeout(()=>{
+    const productsSection = document.querySelector("#products");
+    if(productsSection){
+      productsSection.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+    }
+  }, 100);
+}));
   const sort=$("#sortSelect")?.value||"featured";
   let shown=products.filter(p=>(activeCategory==="all"||p.category===activeCategory)&&(`${p.name} ${p.brand} ${p.category}`.toLowerCase().includes(searchTerm)));
   if(sort==="price-low")shown.sort((a,b)=>a.price-b.price);if(sort==="price-high")shown.sort((a,b)=>b.price-a.price);if(sort==="name")shown.sort((a,b)=>a.name.localeCompare(b.name));
